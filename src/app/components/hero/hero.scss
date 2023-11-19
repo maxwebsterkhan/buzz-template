@@ -1,0 +1,111 @@
+.hero {
+  padding: 15rem 3rem 6rem;
+  letter-spacing: -0.01em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 70vw;
+  margin: auto;
+
+  &__left,
+  &__right {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__left {
+    gap: 16px;
+  }
+
+  &__right {
+    align-items: flex-start;
+    gap: 16px;
+    max-width: 300px;
+  }
+
+  &__main-text {
+    span {
+      line-height: 0.9;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      font-size: 20rem;
+      display: inline-block;
+    }
+  }
+
+  &__sub-text {
+    font-size: 2.2rem;
+  }
+
+  &__sub-text-2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  &__cta-button {
+    width: 101%;
+    height: 100%;
+    font-size: 3rem;
+    background: #fff;
+    -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+    mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+    -webkit-mask-size: 2300% 100%;
+    mask-size: 2300% 100%;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    animation: anim2 0.7s steps(22) forwards;
+
+    &:hover {
+      animation: anim1 0.7s steps(22) forwards;
+    }
+  }
+
+  &__cta-button-container {
+    position: relative;
+    width: 300px;
+    height: 70px;
+    color: white;
+    overflow: hidden;
+    transition: 0.5s;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  &__cta-mask {
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    width: 101%;
+    font-size: 3rem;
+    margin-top: 12px;
+    overflow: hidden;
+  }
+}
+
+@keyframes anim1 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+@keyframes anim2 {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
